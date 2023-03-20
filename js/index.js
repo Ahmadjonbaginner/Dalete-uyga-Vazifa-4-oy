@@ -1,0 +1,1 @@
+// 4-oy Uyga Vazifa va Dars vaqtidagi amaliyotlar
