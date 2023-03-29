@@ -12,7 +12,7 @@
 // }
 
 
-// 4.1 .2
+// 4.1.2
 // let people = [
 //     { name: "Alice", age: 25 },
 //     { name: "Bob", age: 30 },
@@ -29,7 +29,7 @@
 //     }
 // }
 
-//  4.2.1
+//  4.2.1 Uyga Vazifa
 
 // const cars = [{
 //         img: 'https://motor.ru/imgs/2022/03/03/10/5274800/6ddcf7e5e0a907893873e987c81ec9d1fedcc76e.jpg',
@@ -80,3 +80,20 @@
 // })
 
 // cardBox.innerHTML = allDatas.join('')
+
+// 4.2.2
+
+// const people = [
+//     { name: 'Alice', age: 25 },
+//     { name: 'Bob', age: null },
+//     { name: 'Charlie', age: 35 },
+//     { name: 'Dave', age: 20 },
+//     { name: 'Eva', age: null },
+//     { name: 'Frank', age: 30 },
+// ]
+
+// let filtAge = people.filter((element) => element.age !== null)
+
+// filtAge.sort((a, b) => {
+//     return a.age - b.age
+// })
