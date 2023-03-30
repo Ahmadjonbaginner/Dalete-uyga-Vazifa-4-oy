@@ -80,3 +80,46 @@
 // })
 
 // cardBox.innerHTML = allDatas.join('')
+
+// 4.3.1
+
+// const books = [
+//     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925, genre: 'Fiction' },
+//     { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960, genre: 'Fiction' },
+//     { id: 3, title: '1984', author: 'George Orwell', year: 1949, genre: 'Science Fiction' },
+//     { id: 4, title: 'Pride and Prejudice', author: 'Jane Austen', year: 1813, genre: 'Fiction' },
+//     { id: 5, title: 'The Hobbit', author: 'J.R.R. Tolkien', year: 1937, genre: 'Fantasy' },
+// ];
+
+// books.sort((a, b) => {
+//     return a.year - b.year
+// })
+
+// 4.3.2
+
+// const students = [
+//     { id: 1, name: 'Alice', grade: 'A' },
+//     { id: 2, name: 'Bob', grade: 'C' },
+//     { id: 3, name: 'Charlie', grade: 'B' },
+//     { id: 4, name: 'Dave', grade: 'A' },
+//     { id: 5, name: 'Eve', grade: 'B' },
+// ];
+
+// const form = document.querySelector('.form'),
+//     input = document.querySelector('.input'),
+//     idStudents = document.querySelector('.students')
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault()
+
+//     let id = input.value
+
+//     const findStudents = students.find((object) => object.id == id)
+//     if (findStudents) {
+//         return idStudents.innerHTML = `<h2> Name:${findStudents.name} Grade:${findStudents.grade} </h2>`
+//     } else {
+//         idStudents.innerHTML = `<h2> Bunday ID oquvchi yoq! </h2>`
+//     }
+
+//     form.reset()
+// })
