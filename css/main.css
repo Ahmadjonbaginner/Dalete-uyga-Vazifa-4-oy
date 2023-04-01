@@ -1,1 +1,88 @@
 /* 4-oy css */
+
+body {
+    background-color: rgba(206, 205, 205, 0.694);
+}
+
+.box {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+label {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+#name,
+#price {
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: green;
+    color: #fff;
+    font-size: 22px;
+}
+
+.btn:hover {
+    border: 2px solid green;
+}
+
+.menu__item {
+    font-size: 22px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.editBtn {
+    margin-left: 10px;
+    padding: 0 28px;
+    border-radius: 15px 0 0 15px;
+    border-right: none;
+    background-color: aqua;
+    color: #fff;
+}
+
+.editBtn:hover {
+    border: 2px solid aqua;
+    color: aqua;
+    background: none;
+}
+
+.deleteBtn {
+    padding: 0 15px;
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+    background-color: rgb(247, 48, 48);
+    color: #fff;
+}
+
+.deleteBtn:hover {
+    border: 2px solid rgb(247, 48, 48);
+    color: rgb(247, 48, 48);
+    background: none;
+}
+
+.click__item {
+    text-decoration: line-through;
+}
