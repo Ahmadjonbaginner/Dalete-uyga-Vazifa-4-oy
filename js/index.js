@@ -126,88 +126,123 @@
 
 // 4.4.1-Uyga Vazifa
 
-const form = document.querySelector('.form'),
-    nameInput = document.getElementById('name'),
-    priceInput = document.getElementById('price'),
-    btn = document.querySelector('btn'),
-    itemId = document.getElementById('itemId'),
-    itemList = document.querySelector('.itemList');
+// const form = document.querySelector('.form'),
+//     nameInput = document.getElementById('name'),
+//     priceInput = document.getElementById('price'),
+//     btn = document.querySelector('btn'),
+//     itemId = document.getElementById('itemId'),
+//     itemList = document.querySelector('.itemList');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault
 
-    if (!nameInput.value && !priceInput.value) {
-        alert('Iltimos malumot kiriting')
-    }
+//     if (!nameInput.value && !priceInput.value) {
+//         alert('Iltimos malumot kiriting')
+//     }
 
-    if (itemId.value) {
-        item = JSON.parse(localStorage.getItem(itemId.value))
-        item.name = nameInput.value
-        item.price = priceInput.value
-    } else {
-        item = {
-            name: nameInput.value,
-            price: priceInput.value
+//     if (itemId.value) {
+//         item = JSON.parse(localStorage.getItem(itemId.value))
+//         item.name = nameInput.value
+//         item.price = priceInput.value
+//     } else {
+//         item = {
+//             name: nameInput.value,
+//             price: priceInput.value
 
-        }
-        itemId.value = `item ${Date.now()}`
-    }
-
-
-
-    localStorage.setItem(itemId.value, JSON.stringify(item));
-
-    form.reset()
-    itemId.value = ''
-    renderList()
-})
-
-function renderList() {
-    itemList.innerHTML = "";
-
-    totolPrice = 0
-
-    for (const key in localStorage) {
-        if (localStorage.hasOwnProperty(key)) {
-            const item = JSON.parse(localStorage.getItem(key));
-
-            const li = document.createElement('li')
-            li.classList.add('menu__item')
-            li.innerHTML = `<span>${item.name} </span> <span>${item.price} </span>`
-            itemList.appendChild(li)
-
-            const editBtn = document.createElement('button')
-            editBtn.textContent = 'Edit'
-            editBtn.classList.add('editBtn')
-            li.appendChild(editBtn)
-
-            editBtn.addEventListener('click', () => {
-                nameInput.value = item.name
-                priceInput.value = item.price
-                itemId.value = key
-            })
-
-            const deleteBtn = document.createElement('button')
-            deleteBtn.textContent = 'Delete'
-            deleteBtn.classList.add('deleteBtn')
-            li.appendChild(deleteBtn)
-
-            deleteBtn.addEventListener('click', () => {
-                localStorage.removeItem(key, itemId.value)
-                itemList.removeChild(li)
-            })
-            totolPrice += Number(item.price)
-
-            li.addEventListener('click', () => {
-                li.classList.add('click__item')
-            })
-        }
-    }
-    const totolItem = document.createElement('h4')
-    totolItem.textContent = totolPrice
-    itemList.appendChild(totolItem)
+//         }
+//         itemId.value = `item ${Date.now()}`
+//     }
 
 
-}
 
-renderList()
+//     localStorage.setItem(itemId.value, JSON.stringify(item));
+
+//     form.reset()
+//     itemId.value = ''
+//     renderList()
+// })
+
+// function renderList() {
+//     itemList.innerHTML = "";
+
+//     totolPrice = 0
+
+//     for (const key in localStorage) {
+//         if (localStorage.hasOwnProperty(key)) {
+//             const item = JSON.parse(localStorage.getItem(key));
+
+//             const li = document.createElement('li')
+//             li.classList.add('menu__item')
+//             li.innerHTML = `<span>${item.name} </span> <span>${item.price} </span>`
+//             itemList.appendChild(li)
+
+//             const editBtn = document.createElement('button')
+//             editBtn.textContent = 'Edit'
+//             editBtn.classList.add('editBtn')
+//             li.appendChild(editBtn)
+
+//             editBtn.addEventListener('click', () => {
+//                 nameInput.value = item.name
+//                 priceInput.value = item.price
+//                 itemId.value = key
+//             })
+
+//             const deleteBtn = document.createElement('button')
+//             deleteBtn.textContent = 'Delete'
+//             deleteBtn.classList.add('deleteBtn')
+//             li.appendChild(deleteBtn)
+
+//             deleteBtn.addEventListener('click', () => {
+//                 localStorage.removeItem(key, itemId.value)
+//                 itemList.removeChild(li)
+//             })
+//             totolPrice += Number(item.price)
+
+//             li.addEventListener('click', () => {
+//                 li.classList.add('click__item')
+//             })
+//         }
+//     }
+//     const totolItem = document.createElement('h4')
+//     totolItem.textContent = totolPrice
+//     itemList.appendChild(totolItem)
+
+// }
+
+
+// renderList()
+
+// 4.5.1-Uyga Vazifa
+// const states = document.querySelector('.states')
+
+// fetch('https://restcountries.com/v3.1/all').then((response) => response.json()).then((data) => {
+//     data.map((country) => {
+//         console.log(country);
+//         const statesCard = document.createElement('div')
+//         statesCard.classList.add('states__card')
+
+//         const statesImg = document.createElement('img')
+//         statesImg.classList.add('states__img')
+//         statesImg.src = `${country.flags.png}`
+//         statesImg.alt = `${country.flags.alt}`
+
+//         const statesName = document.createElement('h2')
+//         statesName.classList.add('states__name')
+//         statesName.textContent = `Name:${country.name.common}`
+
+//         const statesCapital = document.createElement('h3')
+//         statesCapital.classList.add('states__capital')
+//         statesCapital.textContent = `Capital:${country.capital}`
+
+//         const statesPopulation = document.createElement('h3')
+//         statesPopulation.classList.add('states__population')
+//         statesPopulation.textContent = `Population:${country.population}`
+
+//         statesCard.appendChild(statesImg)
+//         statesCard.appendChild(statesName)
+//         statesCard.appendChild(statesCapital)
+//         statesCard.appendChild(statesPopulation)
+//         states.appendChild(statesCard)
+
+//     })
+// }).catch((error) => console.log(error.message))

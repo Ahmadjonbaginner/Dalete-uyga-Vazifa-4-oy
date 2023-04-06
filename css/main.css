@@ -1,5 +1,7 @@
 /* 4-oy css */
 
+
+/* 
 body {
     background-color: rgba(206, 205, 205, 0.694);
 }
@@ -85,4 +87,35 @@ label {
 
 .click__item {
     text-decoration: line-through;
+} */
+
+
+/* 4.5.1-Uyga Vazifa */
+
+
+/* .states {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
 }
+
+.states__card {
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding-bottom: 15px;
+}
+
+.states__img {
+    border-radius: 10px 10px 0 0;
+}
+
+.states__name,
+.states__capital,
+.states__population {
+    display: inline-block;
+    margin-left: 15px;
+} */
